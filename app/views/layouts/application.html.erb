@@ -11,6 +11,13 @@
 
   <body>
     <p>
+      <!--- If logged in, display the welcome --->
+      <% if @current_user %>
+      Hey, <%= @current_user["first_name"]%>
+      <a href="/logout">Logout</a>
+      <!--- Else --->
+      <a href="/sessions/new">Login</a>
+      |
       <a href="/users/new">Sign Up</a>
     </p>
 
